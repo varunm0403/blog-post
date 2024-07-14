@@ -13,7 +13,7 @@ const PostSchema = new mongoose.Schema({
     commentedAt: { type: Date, default: Date.now },
     name: String
   }],
-  likedBy: Array,   // Array of user IDs who liked the post
+  likedBy: Array,
   dislikedBy: { type: [String], default: [] } 
 });
 
