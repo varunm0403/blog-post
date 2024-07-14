@@ -18,17 +18,14 @@ function Register() {
       console.error('Registration error:', error);
   
       if (error.response) {
-        // The request was made and the server responded with a status code outside the range of 2xx
         if (error.response.data && error.response.data.error) {
           setError("Error Backend : " + error.response.data.error);
         } else {
           setError('Server responded with an error but no specific message was provided.');
         }
       } else if (error.request) {
-        // The request was made but no response was received
         setError('No response received from the server. Please check your network connection.');
       } else {
-        // Something happened in setting up the request that triggered an Error
         setError('An error occurred while setting up the request: ' + error.message);
       }
     }
