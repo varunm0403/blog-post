@@ -6,7 +6,6 @@ import Register from './components/register';
 import BlogList from './utils/BlogList';
 
 function App() {
-  // Retrieve the access token from localStorage
   const accessToken = localStorage.getItem("accessToken");
 
   return (
