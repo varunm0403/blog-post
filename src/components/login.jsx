@@ -14,7 +14,6 @@ function Login() {
       const response = await axios.post('http://localhost:3001/api/login', { email, password });
       const { accessToken, email: userEmail, name, id } = response.data;
 
-      // Store the access token, email, and name in local storage
       localStorage.setItem('accessToken', accessToken);
       localStorage.setItem('userEmail', userEmail);
       localStorage.setItem('name', name);
@@ -22,7 +21,6 @@ function Login() {
 
       console.log(response.data)
 
-      // Redirect the user to another page (e.g., dashboard)
       window.location.href = 'http://localhost:3000/home';
       console.log("Login Successful")
     } catch (error) {
